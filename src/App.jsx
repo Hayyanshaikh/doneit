@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
@@ -8,12 +8,12 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    const storedTodos = JSON.parse(sessionStorage.getItem('todos')) || [];
     setTodos(storedTodos);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
+    sessionStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = (text) => {
