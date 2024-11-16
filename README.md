@@ -3,7 +3,7 @@
 
 ![Tasklist Screenshot](https://i.ibb.co/TtJL3b8/Tasklist.png)
 
-[Tasklist](https://hayyan-tasklist.netlify.app) is a simple and user-friendly task management app designed to help you organize and manage your daily tasks effectively.
+[Tasklist](https://doneit.netlify.app) is a simple and user-friendly task management app designed to help you organize and manage your daily tasks effectively.
 
 ## Features
 
@@ -28,7 +28,7 @@
 
 ## How to Use
 
-1. Open the app using [this link](https://hayyan-tasklist.netlify.app).
+1. Open the app using [this link](https://doneit.netlify.app/).
 2. Add your tasks in the textarea and press "Enter" or create a new line.
 3. Manage tasks by marking them as complete or incomplete. Tasks automatically move between lists.
 4. The app keeps track of all tasks and updates the counts dynamically.
