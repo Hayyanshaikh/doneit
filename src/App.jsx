@@ -8,12 +8,12 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    const storedTodos = JSON.parse(sessionStorage.getItem('todos')) || [];
+    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
     setTodos(storedTodos);
   }, []);
 
   useEffect(() => {
-    sessionStorage.setItem('todos', JSON.stringify(todos));
+    localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = (text) => {
