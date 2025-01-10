@@ -40,8 +40,10 @@ function App() {
   return (
     <TodoContext.Provider value={{ todos, addTodo, toggleTodo, deleteTodo }}>
       <div className="App">
-        <h1>Advanced Todo List</h1>
-        <TodoForm />
+        <div className='todolist_header'>
+          <h1>Advanced Todo List</h1>
+          <TodoForm />
+        </div>
         <TodoList />
       </div>
     </TodoContext.Provider>
