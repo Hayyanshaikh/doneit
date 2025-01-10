@@ -117,7 +117,7 @@ hr {
 ul {
   padding: 0;
   overflow: auto;
-  max-height: 330px;
+  max-height: 380px;
   padding-right: 10px;
   list-style-type: none;
   display: flex;
