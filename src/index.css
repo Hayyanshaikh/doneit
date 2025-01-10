@@ -7,22 +7,25 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body {
+#root {
   background-color: #161a1d;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   height: 100vh;
   padding: 20px;
 }
 
-#root {
-  background-color: #1d2125;
-  padding: 2rem;
-  box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.todo-list {
+  display: flex;
+  flex: 1;
+  grid-gap: 30px;
+}
+
+.App {
   width: 100%;
-  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -36,10 +39,10 @@ h1 {
 form {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   gap: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
 textarea {
@@ -51,7 +54,6 @@ textarea {
   padding: 0.5rem;
   font-size: 14px;
   border-radius: 4px;
-  height: 80px !important;
   background-color: #21272c;
   border: 1px solid #333c43;
 }
@@ -86,20 +88,47 @@ hr {
   border-bottom: 1px solid #333c43;
 }
 
+.task-header input[type="text"] {
+  width: 100%;
+  resize: none;
+  outline: none;
+  color: #ffffffbe;
+  flex: 0 0 auto;
+  padding: 0.5rem;
+  font-size: 14px;
+  border-radius: 4px;
+  max-width: 300px;
+  background-color: #21272c;
+  border: 1px solid #333c43;
+}
+
+.task-header input[type="text"]::placeholder {
+  color: #999;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 ul {
   padding: 0;
   overflow: auto;
-  max-height: 300px;
+  max-height: 330px;
   padding-right: 10px;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
 }
 
 ul::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 ul::-webkit-scrollbar-thumb {
-  background-color: #ccc;
+  background-color: #fff2;
   border-radius: 10px;
 }
 
@@ -108,7 +137,6 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 8px 10px 8px 15px;
-  margin-bottom: 0.5rem;
   background-color: #21272c;
   border: 1px solid #333c43;
   gap: 20px;
@@ -149,11 +177,10 @@ li.completed {
 }
 
 .total-tasks {
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
 }
 
 .total-tasks p {
@@ -166,8 +193,20 @@ li.completed {
 }
 
 .no-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #fff6;
   font-size: 16px;
   padding: 20px;
+  flex: 1;
+}
+
+.assign-task-list {
+  max-width: 50%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
 }
